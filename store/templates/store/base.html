@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Sabão Livre{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .navbar { background-color: #ffe600 !important; }
+        .card-product { transition: transform .2s; }
+        .card-product:hover { transform: scale(1.03); }
+        .product-price { font-size: 1.5rem; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'product_list' %}">
+                🧼 𝙎𝘼𝘽Ã𝙊 𝘿𝘼 𝙎𝘼𝙉𝙏𝙊𝙎
+            </a>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="text-center text-muted py-4 mt-4 border-top">
+        <p>&copy; 2025 Sabão Livre - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

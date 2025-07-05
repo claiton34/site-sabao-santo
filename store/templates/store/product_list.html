@@ -1,0 +1,36 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Nossos Sabões Artesanais{% endblock %}
+
+{% block content %}
+<div class="p-4 p-md-5 mb-4 text-dark rounded bg-light">
+    <div class="col-md-8 px-0">
+        <h1 class="display-4 fst-italic">Sabões Artesanais Feitos com Cuidado</h1>
+        <p class="lead my-3">Descubra nossos produtos feitos com ingredientes naturais. Entrega e pagamento pessoalmente.</p>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    {% for product in products %}
+    <div class="col">
+        <div class="card shadow-sm h-100 card-product">
+            <a href="{% url 'product_detail' product.id %}" class="text-decoration-none text-dark">
+                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}" style="height: 225px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text text-muted">{{ product.description|truncatewords:15 }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="product-price">R$ {{ product.price }}</span>
+                        <small class="text-success fw-bold">Estoque Disponível</small>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <p class="text-center">Nenhum produto em estoque no momento. Volte em breve!</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
