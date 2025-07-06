@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-s#6=p32kavew)1(ykgk=%(%vsrrp6lvtdfez3d5uydtvk#pjy^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['site-sabao-santo.onrender.com', '127.0.0.1', 'localhost']
 
@@ -131,4 +131,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'claitonhgft@gmail.com'  # <-- TROQUE PELO SEU GMAIL
-EMAIL_HOST_PASSWORD = 'k z y l b i b k a i a c l n v o' # <-- TROQUE PELA SENHA DE APP
+EMAIL_HOST_PASSWORD = 't i k w h x x v g n h o e i v s' # <-- TROQUE PELA SENHA DE APP
