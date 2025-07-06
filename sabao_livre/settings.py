@@ -127,6 +127,8 @@ MEDIA_ROOT = BASE_DIR / 'products'
 # ADICIONE ESTA LINHA PARA ATIVAR O ARMAZENAMENTO OTIMIZADO DO WHITENOISE
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+STATICFILES_DIRS = [MEDIA_ROOT]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
