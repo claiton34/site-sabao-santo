@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', # <-- ESTA LINHA É ESSENCIAL
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -126,7 +127,6 @@ MEDIA_ROOT = BASE_DIR / 'products'
 
 # ADICIONE ESTA LINHA PARA ATIVAR O ARMAZENAMENTO OTIMIZADO DO WHITENOISE
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
 STATICFILES_DIRS = [MEDIA_ROOT]
 
 # Default primary key field type
