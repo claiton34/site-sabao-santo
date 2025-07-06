@@ -116,6 +116,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles' # Essa linha já deve estar aí
+
+# ADICIONE ESTAS DUAS LINHAS ABAIXO:
+# Elas dizem ao Django que a pasta de uploads se chama 'products'
+MEDIA_URL = '/products/'
+MEDIA_ROOT = BASE_DIR / 'products'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
