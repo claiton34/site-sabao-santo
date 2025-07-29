@@ -143,4 +143,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'claitonhgft@gmail.com'  # <-- TROQUE PELO SEU GMAIL
-EMAIL_HOST_PASSWORD = 't i k w h x x v g n h o e i v s' # <-- TROQUE PELA SENHA DE APP
+EMAIL_HOST_PASSWORD = 'tikwhxxvggehoivs' # <-- TROQUE PELA SENHA DE APP
